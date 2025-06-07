@@ -18,7 +18,7 @@ export const Footer_Data: FooterData = {
     //       link: 'https://github.com/Theo-Messi/Theo-Docs'
     //     },
     //     {
-    //       name: '玄学宝典',
+    //       name: '易道真解',
     //       link: 'https://github.com/Theo-Messi/xx.theojs.cn'
     //     },
     //     {

@@ -47,7 +47,7 @@ export const transformPageData: UserConfig['transformPageData'] = (pageData) => 
           }
         },
         description: '中华传统五术书籍传世经典著作',
-        name: '玄学宝典'
+        name: '易道真解'
       }
     : {
         '@context': 'https://schema.org',

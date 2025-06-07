@@ -1,9 +1,9 @@
 ---
 layout: home
-title: 玄学宝典
+title: 易道真解
 titleTemplate: 中华传统五术书籍传世经典著作
 hero:
-  name: 玄学宝典
+  name: 易道真解
   text: 山医命相卜
   tagline: 中华传统五术书籍传世经典著作
   image: 
