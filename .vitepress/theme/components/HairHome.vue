@@ -71,8 +71,8 @@ onBeforeUnmount(() => {
         <div class="product-demo">
           <ProductPreview :screen="screen" />
           <span class="demo-caption"
-            >{{ previewTabs.findIndex((item) => item.key === screen) + 1 }} / 7 · {{ activePreview.title }} ·
-            点击截图查看大图</span
+            >{{ previewTabs.findIndex((item) => item.key === screen) + 1 }} / {{ previewTabs.length }} ·
+            {{ activePreview.title }} · 点击截图查看大图</span
           >
         </div>
         <div class="product-story">
@@ -94,6 +94,55 @@ onBeforeUnmount(() => {
           <a class="underlined-link" href="#features">看看具体能做什么 <span>↗</span></a>
         </div>
       </div>
+    </section>
+
+    <section id="highlights" class="section highlights-section" aria-labelledby="highlights-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">服务与预约 / 到店之前，安排妥当</p>
+          <h2 id="highlights-title">选好心仪的服务，<br />约好合适的时间。</h2>
+        </div>
+        <p class="section-intro">
+          <span class="promo-text">基础款已包含 · 开发版全部包含</span
+          ><br />从选择设计师与服务项目，到查看可约时段，让顾客提前安排，让门店有序接待。
+        </p>
+      </div>
+      <article class="highlight-row">
+        <div class="product-demo"><ProductPreview screen="services" /></div>
+        <div class="highlight-copy">
+          <p class="eyebrow">01 / 服务选择</p>
+          <h3>
+            <span class="promo-title" data-tone="2">做什么、找谁做，<br />到店之前就选好。</span>
+          </h3>
+          <p>
+            顾客可以切换设计师，按分类浏览服务项目，提前了解价格和预计耗时。把想做的服务选清楚，让预约更有方向，也让到店沟通更从容。
+          </p>
+          <div class="story-notice">
+            <p><span class="promo-text">选择设计师</span>：查看不同设计师提供的服务，找到适合自己的安排。</p>
+            <p><span class="promo-text">分类浏览项目</span>：按服务类别查找项目，价格与预计耗时清晰展示。</p>
+            <p><span class="promo-text">组合选择服务</span>：按需求选择项目，再进入预约流程，把服务安排提前完成。</p>
+          </div>
+          <p class="screenshot-note">截图来自体验门店；服务项目、价格与耗时以门店配置为准。</p>
+        </div>
+      </article>
+      <article class="highlight-row highlight-reverse">
+        <div class="product-demo"><ProductPreview screen="booking" /></div>
+        <div class="highlight-copy">
+          <p class="eyebrow">02 / 预约时间</p>
+          <h3>
+            <span class="promo-title" data-tone="1">哪天有空、几点可约，<br />一眼就能看清楚。</span>
+          </h3>
+          <p>
+            按设计师与日期查看预约时段，区分可预约、已预约和休息安排。顾客选择适合自己的时间，门店通过排班与预约规则管理服务节奏。
+          </p>
+          <div class="story-notice">
+            <p><span class="promo-text">按日期查看</span>：切换日期了解时段安排，把到店计划提前确定。</p>
+            <p><span class="promo-text">时段状态清晰</span>：可约、已约和休息分别展示，减少反复询问。</p>
+            <p><span class="promo-text">衔接门店排班</span>：结合设计师的可服务时间与休息安排，选择时段后确认预约。</p>
+          </div>
+          <p class="screenshot-note">截图展示体验门店当时的时段状态；实际可约时间以小程序为准。</p>
+        </div>
+      </article>
     </section>
 
     <section id="features" class="section feature-section">
@@ -256,11 +305,7 @@ onBeforeUnmount(() => {
       <div>
         <p class="eyebrow">体验版 · 申请开放中</p>
         <h2>先体验，再决定。</h2>
-        <p>
-          小程序尚未正式发布，当前为<span class="promo-text">体验版本</span>。<br />请<span class="promo-text"
-            >联系管理员申请体验</span
-          >，了解功能与开通安排。
-        </p>
+        <p><br />请<span class="promo-text">联系管理员申请体验</span>，了解功能与开通安排。</p>
         <VPButton theme="brand" text="联系管理员申请体验" @click="openModal()" />
         <a class="underlined-link" :href="merchantUrl" target="_blank" rel="noopener noreferrer"
           >已有账号？进入商家运营端 ↗</a

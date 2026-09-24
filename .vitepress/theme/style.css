@@ -797,3 +797,63 @@
 .dark .hair-content .promo-title[data-tone='5'] {
   --lm-promo-title-bg: linear-gradient(110deg, #fda4af, #fdba74);
 }
+
+/* 作品、评价重点展示复用已有截图放大组件与 Notice 配色。 */
+.hair-content .highlight-row {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+  margin-top: 48px;
+}
+.hair-content .highlight-row + .highlight-row {
+  margin-top: 80px;
+}
+.hair-content .highlight-copy h3 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.5;
+}
+.hair-content .highlight-copy > p:not(.eyebrow) {
+  color: var(--vp-c-text-2);
+}
+.hair-content .highlight-copy .story-notice p {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+.hair-content .highlight-reverse {
+  grid-template-columns: minmax(0, 1fr) 330px;
+}
+.hair-content .highlight-reverse .product-demo {
+  grid-column: 2;
+  grid-row: 1;
+}
+.hair-content .highlight-reverse .highlight-copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+@media (max-width: 959px) {
+  .hair-content .highlight-row {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 28px;
+  }
+  .hair-content .highlight-reverse {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+}
+@media (max-width: 639px) {
+  .hair-content .highlight-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .hair-content .highlight-row .highlight-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hair-content .highlight-row .product-demo {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .hair-content .highlight-row + .highlight-row {
+    margin-top: 56px;
+  }
+}

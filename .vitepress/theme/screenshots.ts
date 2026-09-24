@@ -49,6 +49,22 @@ export const screenshots = [
     text: '待实施、待评价、已评价分类展示，预约时间、取号码与项目内容清晰可查。'
   },
   {
+    key: 'reviews',
+    title: '订单评价',
+    width: 1170,
+    height: 2532,
+    sub: '把一次好体验，变成看得见的口碑。',
+    text: '在设计师主页查看顾客星级、文字、图片与服务标签，支持好评、有图筛选。让后来者从具体反馈中了解服务。'
+  },
+  {
+    key: 'portfolio',
+    title: '设计师作品',
+    width: 1170,
+    height: 2532,
+    sub: '先看作品，再找到懂你风格的人。',
+    text: '在设计师主页集中浏览作品图片，结合设计师介绍与服务信息了解风格，通过联系设计师入口沟通心仪的造型。'
+  },
+  {
     key: 'profile',
     title: '个人中心',
     width: 626,
@@ -57,4 +73,5 @@ export const screenshots = [
     text: '个人资料、我的评价、专属设计师和联系管理员集中管理，顾客再次到店更加方便。'
   }
 ]
-export const screenshotPath = (key: string) => `/images/miniapp/${key}.png`
+export const screenshotPath = (key: string) =>
+  `/images/miniapp/${key}.${['reviews', 'portfolio'].includes(key) ? 'jpg' : 'png'}`
