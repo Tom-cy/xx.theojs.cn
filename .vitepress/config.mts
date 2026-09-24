@@ -11,7 +11,7 @@ export default defineConfig({
   cleanUrls: true,
   appearance: false,
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#f7f7f2' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: '发艺视界 HAIR WORLDS' }],

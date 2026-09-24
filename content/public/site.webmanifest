@@ -1,7 +1,7 @@
 {
   "background_color": "#f7f7f2",
   "display": "standalone",
-  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }],
+  "icons": [{ "src": "/favicon.ico", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }],
   "lang": "zh-CN",
   "name": "发艺视界",
   "short_name": "发艺视界",
