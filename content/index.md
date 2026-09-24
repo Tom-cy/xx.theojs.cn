@@ -1,49 +1,32 @@
 ---
 layout: home
-title: 玄学宝典
-titleTemplate: 中华传统五术书籍传世经典著作
+title: 发艺视界
+titleTemplate: 美发门店小程序 · 让好手艺遇见好生意
+description: 发艺视界，为美发门店打造的微信小程序。作品展示、设计师主页、在线预约、取号排队、订单评价与运营管理，基础款1200元/年，开发版2500元/年，支持微信支付、服务号消息与定制开发。
 hero:
-  name: 玄学宝典
-  text: 山医命相卜
-  tagline: 中华传统五术书籍传世经典著作
+  name: 发艺视界
+  text: 让好手艺，遇见好生意。
+  tagline: 把门店、作品和设计师，装进顾客的微信里。从一次心动到一次预约，让服务更有序，让经营更从容。
   image:
-    src: https://doc.theojs.cn/index/home.webp
-    alt: home
-    fetchpriority: high
-    width: 320
-    height: 320
-
+    src: /images/hero-editorial.png
+    alt: 发艺视界品牌发型概念摄影
+    width: 1536
+    height: 1024
   Notice:
-    title: '<span class="promo-title">青云梯 活动开启！</span>'
-    desc: |
-      · 月/季/半年付<span class="promo-text"> 85折: qyt85 </span>
-      · 3年以上<span class="promo-text"> 48折: qyt80 </span>
-      · 配合优惠码折上折，最高可达<span class="promo-text">48折</span>
-    # date: '9月15号23点59分'
-    # dateText: '活动截止至'
-    link: https://itheo.top/qyt
-    rel: sponsored noreferrer
-
+    title: 为美发门店，准备好下一步。
+    desc: 基础款 ¥1,200/年 · 开发版 ¥2,500/年，选择适合你的经营方式。
+    link: '#pricing'
+    linkText: 查看版本
   actions:
     - theme: brand
-      text: 开始学习
-      link: /山/博山篇
-
+      text: 查看版本与价格
+      link: '#pricing'
     - theme: alt
-      text: 提交书籍与纠错
-      link: /提交书籍与纠错
-
-    - theme: alt
-      text: 专线推荐
-      link: https://doc.theojs.cn/serve/airport/qingyunti
-
-    - theme: alt author
-      text: Theo-Docs
-      link: https://doc.theojs.cn
-
-    - theme: alt logo
-      text: Lumen
-      link: https://lumen.theojs.cn
+      text: 探索小程序功能
+      link: '#product'
+    - theme: text
+      text: 体验小程序
+      link: '#experience'
 ---
 
-<Home />
+<HairHome />
