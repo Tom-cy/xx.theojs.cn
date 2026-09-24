@@ -8,15 +8,20 @@ hero:
   text: 让好手艺，遇见好生意。
   tagline: 把门店、作品和设计师，装进顾客的微信里。从一次心动到一次预约，让服务更有序，让经营更从容。
   image:
-    src: /images/hero-editorial.png
-    alt: 发艺视界品牌发型概念摄影
-    width: 1536
-    height: 1024
+    src: /images/miniapp/store.png
+    alt: 发艺视界小程序体验版真实截图
+    fetchpriority: high
+    width: 148
+    height: 320
   Notice:
-    title: 为美发门店，准备好下一步。
-    desc: 基础款 ¥1,200/年 · 开发版 ¥2,500/年，选择适合你的经营方式。
-    link: '#pricing'
-    linkText: 查看版本
+    title: '<span class="promo-title">发艺视界 · 小程序体验版开放申请</span>'
+    desc: |
+      · 基础款 <span class="promo-text">¥1,200 / 年</span>，覆盖门店日常经营
+      · 开发版 <span class="promo-text">¥2,500 / 年</span>，支持支付、消息与定制
+      · 小程序尚未发布，<span class="promo-text">联系管理员申请体验</span>
+    link: '#experience'
+    target: _self
+
   actions:
     - theme: brand
       text: 查看版本与价格
@@ -24,9 +29,11 @@ hero:
     - theme: alt
       text: 探索小程序功能
       link: '#product'
-    - theme: text
-      text: 体验小程序
+    - theme: alt
+      text: 联系管理员申请体验
       link: '#experience'
 ---
+
+<Home />
 
 <HairHome />

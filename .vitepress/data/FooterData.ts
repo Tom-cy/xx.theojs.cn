@@ -1,49 +1,22 @@
 import type { FooterData } from '@theojs/lumen'
 
 export const Footer_Data: FooterData = {
-  beian: { icp: { number: '鄂ICP备2024060426号' }, police: { number: '粤公网安备44200102445449号' }, showIcon: true },
-  author: { name: 'Theo', link: 'https://github.com/s-theo' },
+  beian: { icp: { number: '皖ICP备2020015992号-2', link: 'https://beian.miit.gov.cn/' }, showIcon: false },
+  author: { name: '发艺视界', link: '/', text: '保留所有权利' },
   group: [
     {
-      icon: 'mdi:github',
-      title: 'GitHub Source',
+      title: '发艺视界',
       links: [
-        { name: 'Theo-Docs', link: 'https://github.com/s-theo/Theo-Docs' },
-        { name: '玄学宝典', link: 'https://github.com/s-theo/xx.theojs.cn' },
-        { name: '常用配置文件', link: 'https://github.com/s-theo/dotfiles' },
-        { name: 'Lumen', link: 'https://github.com/s-theo/lumen' }
+        { name: '小程序功能', link: '/#features' },
+        { name: '版本与价格', link: '/#pricing' }
       ]
     },
     {
-      icon: 'heroicons:globe-alt-solid',
-      title: '优质线路',
+      title: '体验与咨询',
       links: [
-        { name: '青云梯', link: 'https://itheo.top/qyt', rel: 'sponsored noreferrer' },
-        { name: 'Galaxy - 银河云', link: 'https://itheo.top/yhy', rel: 'sponsored noreferrer' },
-        { name: 'TNT Cloud', link: 'https://itheo.top/tnt', rel: 'sponsored noreferrer' },
-        { name: 'FlyingBird - 飞鸟机场', link: 'https://itheo.top/flyingbird', rel: 'sponsored noreferrer' },
-        { name: 'Totoro - 龙猫云', link: 'https://itheo.top/totoro', rel: 'sponsored noreferrer' },
-        { name: '小蜜蜂', link: 'https://itheo.top/bee', rel: 'sponsored noreferrer' },
-        { name: 'OKANC', link: 'https://itheo.top/okanc', rel: 'sponsored noreferrer' }
-      ]
-    },
-    {
-      icon: 'heroicons:tv-solid',
-      title: '流媒体合租',
-      links: [
-        { name: '银河录像局', link: 'https://itheo.top/yh', rel: 'sponsored noreferrer' },
-        { name: '奈飞小铺', link: 'https://itheo.top/ihezu', rel: 'sponsored noreferrer' },
-        { name: '蜜糖商店', link: 'https://itheo.top/metshop', rel: 'sponsored noreferrer' },
-        { name: 'SMS-Activate', link: 'https://itheo.top/sms', rel: 'sponsored noreferrer' }
-      ]
-    },
-    {
-      icon: 'heroicons:link-16-solid',
-      title: '相关链接',
-      links: [
-        { name: 'Theo-Docs', link: 'https://doc.theojs.cn/' },
-        { name: 'VitePress', link: 'https://vitepress.dev/' },
-        { name: 'Lumen', link: 'https://lumen.theojs.cn/' }
+        { name: '联系管理员申请体验', link: '/#experience' },
+        { name: '电话 18507040452', link: 'tel:18507040452' },
+        { name: '微信 mi_cy0527', link: '/#experience' }
       ]
     }
   ]

@@ -1,6 +1,6 @@
 // 所有基础能力均对照本地小程序页面及运营端接口整理，核验记录见 docs/product-audit.md。
 export const merchantUrl = 'https://hair.iskaola.com/login?sourceId=100000000002&storeCode=DCY809753'
-export const contact = { wechat: '', phone: '', url: '' }
+export const contact = { wechat: 'mi_cy0527', phone: '18507040452', url: '' }
 export const features = [
   {
     id: '01',
@@ -126,6 +126,6 @@ export const faqs = [
   },
   {
     q: '可以先看效果，再决定版本吗？',
-    a: '可以先浏览本页功能与真实截图，再通过体验入口了解当前门店的小程序。截图来自当前体验门店，不代表所有门店的配置，实际展示和可用功能以配置版本为准。'
+    a: '可以先浏览本页功能与真实截图。小程序目前尚未正式发布，为体验版本；请联系管理员申请体验资格，电话 18507040452，微信 mi_cy0527。截图来自体验门店，实际可用功能以配置版本为准。'
   }
 ]
