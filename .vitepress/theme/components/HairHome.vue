@@ -3,6 +3,7 @@ import { useData } from 'vitepress'
 import { computed, nextTick, onBeforeUnmount, ref } from 'vue'
 import ProductPreview from './ProductPreview.vue'
 import { contact, faqs, features, merchantUrl, upgrades } from '../product'
+import { screenshots } from '../screenshots'
 
 const { frontmatter } = useData()
 const hero = computed(() => frontmatter.value.hero)
@@ -12,26 +13,7 @@ const filter = ref('全部功能')
 const visibleFeatures = computed(() =>
   filter.value === '全部功能' ? features : features.filter((item) => item.group === filter.value)
 )
-const previewTabs = [
-  {
-    key: 'store',
-    title: '门店首页',
-    sub: '把第一印象，变成到店期待。',
-    text: '轮播展示品牌，作品表达风格，设计师建立信任。把顾客想了解的内容，放在同一个熟悉的入口。'
-  },
-  {
-    key: 'booking',
-    title: '在线预约',
-    sub: '顾客自己选，门店有序接。',
-    text: '从设计师到服务项目，再到可约时段，顾客按自己的节奏完成选择，门店统一管理预约安排。'
-  },
-  {
-    key: 'orders',
-    title: '订单记录',
-    sub: '服务走到哪一步，一眼就清楚。',
-    text: '预约、服务、完成与取消状态集中查看，让顾客的每一次到店，都有清晰的记录。'
-  }
-]
+const previewTabs = screenshots
 const activePreview = computed(() => previewTabs.find((item) => item.key === screen.value)!)
 const modal = ref<HTMLDialogElement>()
 const selectedPlan = ref('')
@@ -125,16 +107,8 @@ onBeforeUnmount(() => {
           <div class="visual-label"><span>THE DIGITAL SALON</span><span>顾客体验 × 门店经营</span></div>
           <div class="hero-orbit" aria-hidden="true"></div>
           <div class="vertical-note">GOOD STYLE. BETTER BUSINESS.</div>
-          <ProductPreview />
-          <div class="float-card float-booking">
-            <span class="float-icon">✓</span>
-            <div><strong>下一次见面，已安排。</strong><small>预约 · 服务 · 评价</small></div>
-          </div>
-          <div class="float-card float-price">
-            <small>基础款 / 年</small><strong><span>¥</span> 1,200</strong>
-            <p>从门店展示，到日常经营。</p>
-          </div>
-          <div class="visual-disclaimer">基于现有功能制作的界面示意 · 非实机截图</div>
+          <ProductPreview priority />
+          <div class="visual-disclaimer">甲艺空间 · 小程序真实截图 · 点击可放大</div>
         </div>
       </section>
       <div class="values-strip">
@@ -152,26 +126,31 @@ onBeforeUnmount(() => {
           <p class="section-intro">从“这款发型真好看”，到“下次还找你”。<br />把服务前后的每一步，连接起来。</p>
         </div>
         <div class="product-showcase">
+          <div class="preview-tabs" aria-label="切换小程序真实截图">
+            <button
+              v-for="tab in previewTabs"
+              :key="tab.key"
+              :aria-pressed="screen === tab.key"
+              :class="{ active: screen === tab.key }"
+              @click="screen = tab.key"
+            >
+              {{ tab.title }}
+            </button>
+          </div>
           <div class="product-demo">
-            <ProductPreview :screen="screen" /><span class="demo-caption">界面示意 / 内容与日期为演示数据</span>
+            <ProductPreview :screen="screen" />
+            <span class="demo-caption"
+              >{{ previewTabs.findIndex((item) => item.key === screen) + 1 }} / 7 · {{ activePreview.title }} ·
+              点击截图查看大图</span
+            >
           </div>
           <div class="product-story">
-            <div class="preview-tabs" aria-label="切换产品展示">
-              <button
-                v-for="tab in previewTabs"
-                :key="tab.key"
-                :aria-pressed="screen === tab.key"
-                :class="{ active: screen === tab.key }"
-                @click="screen = tab.key"
-              >
-                {{ tab.title }}
-              </button>
-            </div>
             <div aria-live="polite">
               <p class="eyebrow">MINI PROGRAM × EVERYDAY BUSINESS</p>
               <h3>{{ activePreview.sub }}</h3>
               <p>{{ activePreview.text }}</p>
             </div>
+            <p class="screenshot-note">截图来自当前体验门店；其中的价格、时段与服务号入口以门店及版本配置为准。</p>
             <ul class="story-points">
               <li>顾客端：看作品、选设计师、约时间</li>
               <li>门店端：管服务、排预约、跟订单</li>
@@ -291,23 +270,23 @@ onBeforeUnmount(() => {
               <tbody>
                 <tr v-for="item in features" :key="item.id">
                   <th scope="row">{{ item.title }}</th>
-                  <td>✓ 包含</td>
-                  <td>✓ 包含</td>
+                  <td data-plan="基础款">✓ 包含</td>
+                  <td data-plan="开发版">✓ 包含</td>
                 </tr>
                 <tr>
                   <th scope="row">小程序微信支付</th>
-                  <td>不包含</td>
-                  <td>✓ 支持接入</td>
+                  <td data-plan="基础款">不包含</td>
+                  <td data-plan="开发版">✓ 支持接入</td>
                 </tr>
                 <tr>
                   <th scope="row">服务号业务消息</th>
-                  <td>不包含</td>
-                  <td>✓ 支持接入</td>
+                  <td data-plan="基础款">不包含</td>
+                  <td data-plan="开发版">✓ 支持接入</td>
                 </tr>
                 <tr>
                   <th scope="row">定制化开发</th>
-                  <td>不包含</td>
-                  <td>✓ 支持，范围与费用另议</td>
+                  <td data-plan="基础款">不包含</td>
+                  <td data-plan="开发版">✓ 支持，范围与费用另议</td>
                 </tr>
               </tbody>
             </table>
